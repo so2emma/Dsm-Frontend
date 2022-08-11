@@ -5,7 +5,8 @@
 @import "../node_modules/bootstrap/scss/functions";
 
 // // 2. Include any default variable overrides here
-$primary: #003049;
+$primary: #219EBC;
+// $primary: #219000;
 // // 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
@@ -21,13 +22,13 @@ $primary: #003049;
 
 // 5. Add additional custom code here
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&family=Roboto:ital,wght@1,100;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
 }
 .navbar{
     .nav-link{
@@ -42,61 +43,24 @@ $primary: #003049;
 
 }
 #background{
-    background: url("../img/background.jpg");
+    background: url("../img/background.jpg") rgba(255, 255, 255, 0.7);
     width:auto;
     background-size: inherit;
-    background-repeat: no-repeat;
+    background-repeat:no-repeat;
     .container{
-        background-color: #fff;
+        background-color: #000;
+        color: #fff;
         opacity: 0.8;
         border-radius: 10px;
 
         .notification{
-            border-left: solid #000 2px;
+            border-left: solid #fff 2px;
         }
     }
 }
-#class{
-    .packages{
-        list-style-type: none;
-        li{
-            font-size: 1.5rem;
-            text-align: center;
-        }
-    }
-}
-section{
-    border-bottom: 1px solid rgba(206, 206, 206, 0.87) -100px;
-    padding: 0 10px;
-    .heading{
-        h3{
-            font-size: 2rem;
-            font-family: 'Roboto Slab', serif;
-            color: $primary;
-        }
-    }
-    
-}
-#ambassador{
-    color: #fff;
-    .heading{
-        h3{
-            color: #fff;
-        }
-    }
-}
-
-footer{
-    border-top: solid 3px #fff;
-}
-
-#content{
-    height: 100vh;
-    .col-md-6:first-child{
-        height: 100vh;
-        color: #fff;
-    }
+#content {
+    height: 150vh;
     .col-md-6{
-        height: 100vh;
+        height: 150vh;
     }
 }
