@@ -5,8 +5,8 @@
 @import "../node_modules/bootstrap/scss/functions";
 
 // // 2. Include any default variable overrides here
-$primary: #219EBC;
-// $primary: #219000;
+// $primary: #219EBC;
+$primary: #219000;
 // // 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
@@ -57,6 +57,9 @@ $primary: #219EBC;
             border-left: solid #fff 2px;
         }
     }
+}
+.intro {
+    text-align: justify;
 }
 #content {
     height: 150vh;
