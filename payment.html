@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<link rel="stylesheet" href="assets/scss/custom.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<title>Payment UI</title>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="row justify-content-center py-5">
+			<div class="col-md-6">
+				<p class="text-center fw-bold">MAKE PAYMENt</p>
+				<div class="card p-3">
+					<div class="card-body">
+						<ul class="nav nav-pills nav-fill bg-light" id="pills-tab" role="tablist">
+							<li class="nav-item" role="presentation">
+								<button class="nav-link active" id="credit-card-tab" data-bs-toggle="pill"
+									data-bs-target="#credit-card" type="button" role="tab" aria-controls="credit-card"
+									aria-selected="true"><i class="fa-solid fa-credit-card"></i> Credit Card</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="paypal-tab" data-bs-toggle="pill" data-bs-target="#paypal"
+									type="button" role="tab" aria-controls="paypal"
+									aria-selected="false"><i class="fa-brands fa-paypal"></i> Paypal</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="bank-transfer-tab" data-bs-toggle="pill"
+									data-bs-target="#bank-transfer" type="button" role="tab"
+									aria-controls="bank-transfer" aria-selected="false"><i class="fa-solid fa-money-bill-transfer"></i> Bank Transfer</button>
+							</li>
+						</ul>
+						<div class="tab-content" id="pills-tabContent">
+							<div class="tab-pane fade show active" id="credit-card" role="tabpanel"
+								aria-labelledby="credit-card-tab">
+								<p class="alert alert-success my-3">Payment Successful</p>
+								<form role="form">
+									<div class="mb-3">
+										<label for="username">Full name (on the card)</label>
+										<input type="text" class="form-control" name="username" placeholder=""
+											required="">
+									</div>
+
+									<div class="mb-3">
+										<label for="cardNumber">Card number</label>
+										<div class="input-group">
+											<input type="text" class="form-control" name="cardNumber" placeholder="">
+												<span class="input-group-text text-muted">
+													<i class="fa-brands fa-cc-visa mx-2"></i> 
+													<i class="fa-brands fa-cc-mastercard"></i>
+												</span>
+
+										</div>
+
+									</div>
+
+									<div class="row">
+										<div class="col-8">
+											<div class="mb-3">
+												<label><span class="hidden-xs">Expiration</span> </label>
+												<div class="input-group">
+													<input type="number" class="form-control" placeholder="MM" name="">
+													<input type="number" class="form-control" placeholder="YY" name="">
+												</div>
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="mb-3">
+												<label for="">CVV</label>
+												<input type="number" class="form-control" required="">
+											</div>
+										</div>
+									</div>
+									<div class="mb-3">
+										<button class="btn btn-primary text-white">Confirm</button>
+									</div>
+								</form>
+							</div>
+							<div class="tab-pane fade" id="paypal" role="tabpanel" aria-labelledby="paypal-tab">
+								<br>
+								<p>Paypal is easiest way to pay online</p>
+								<p> <button type="button" class="btn btn-primary text-white"><i class="fa-brands fa-paypal"></i> Log in my Paypal </button> </p>
+								<p> <span class="fw-bold">Note:</span> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+									Voluptatem placeat dolore suscipit aliquam enim quae! 
+								</p>
+							</div>
+							<div class="tab-pane fade" id="bank-transfer" role="tabpanel" aria-labelledby="bank-transfer-tab">
+								<br>
+								<p>Bank account details</p>
+								<dl class="param">
+									<dt>BANK: </dt>
+									<dd> THE WORLD BANK</dd>
+								</dl>
+								<dl class="param">
+									<dt>Account number: </dt>
+									<dd> 12345678912345</dd>
+								</dl>
+								<dl class="param">
+									<dt>IBAN: </dt>
+									<dd> 123456789</dd>
+								</dl>
+								<p><strong>Note:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+									eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. </p>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+</body>
+
+</html> -->
