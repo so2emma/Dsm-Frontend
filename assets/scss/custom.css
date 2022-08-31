@@ -12000,6 +12000,10 @@ fieldset:disabled .btn {
   text-align: justify;
 }
 
+.lead-sm {
+  font-size: 18px;
+}
+
 #content {
   height: 150vh;
 }
