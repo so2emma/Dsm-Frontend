@@ -61,6 +61,10 @@
                                         <input type="checkbox" id="checkbox" name="checkbox">
                                         <label for="checkbox">Student/ Corper</label>
                                     </div>
+                                    <div class="mb-3">
+                                        <input type="checkbox" id="partPayment" name="partPayment">
+                                        <label for="checkbox">Part Payment (50%)</label>
+                                    </div>
                                     <p class="alert alert-danger my-3" style="display:none;"></p>
                                     <div class="mb-3">
                                         <button class="btn btn-primary text-white">Confirm</button>
@@ -125,7 +129,8 @@
 
         function SquadPay() {
             const discount = checkbox.checked ? 0.50 : 1
-            const amount = courseDetails[course.value] * discount
+            const paymentType = partPayment.checked ? 0.50 : 1
+            const amount = courseDetails[course.value] * paymentType * discount
             const sandboxKey = "sandbox_pk_7e75ad7aa1ecce1f589361edbf2bc850"
             const key = "pk_4b9d9f2bc6832e50cd7f9a1efefcfb2853b997349d"
             const squadInstance = new squad({
@@ -140,7 +145,7 @@
                     setTimeout(() => window.location.assign('/'), 5000)
                     //Write a callback function to update DB about user's status
                 },
-                key: key,
+                key: sandboxKey,
                 email: email.value,
                 amount: amount * 100,
                 currency_code: "NGN"
