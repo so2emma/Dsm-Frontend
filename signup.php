@@ -1,4 +1,4 @@
-<?php 
+<?php
 // connect to the database
 $conn = mysqli_connect('localhost','dsmniger_user','ag&qjnd^Bj@','dsmniger_dsm') or die (mysqli_error($conn));
 if(!$conn){
@@ -27,80 +27,80 @@ if(isset($_POST["submit"])){
     if(empty($_POST['name'])){
         $errors['name'] = 'Please insert Fullname </br>';
     }else{
-    $name = $_POST['name']; 
+    $name = $_POST['name'];
     }
 
     // check for phone
     if(empty($_POST['phone'])){
         $errors['phone'] = 'Please insert Phone </br>';
     }else{
-    $phone = $_POST['phone']; 
+    $phone = $_POST['phone'];
     }
 
-    //  check for email address 
+    //  check for email address
     if(empty($_POST['email'])){
         $errors['email'] = 'An e-mail is required </br>';
     }else{
-    $email = $_POST['email']; 
+    $email = $_POST['email'];
     if(!filter_var($email,FILTER_VALIDATE_EMAIL)){
         $errors['email'] ='email must be valid email address';
-    } 
+    }
     }
 
     // check for sex
     if(empty($_POST['sex'])){
         $errors['sex'] = 'Please insert Sex </br>';
     }else{
-    $sex = $_POST['sex']; 
+    $sex = $_POST['sex'];
     }
 
     // check for maritalStatus
     if(empty($_POST['maritalStatus'])){
         $errors['maritalStatus'] = 'Please insert Marital Status </br>';
     }else{
-    $maritalStatus = $_POST['maritalStatus']; 
+    $maritalStatus = $_POST['maritalStatus'];
     }
 
     // check for city
     if(empty($_POST['city'])){
         $errors['city'] = 'Please insert city </br>';
     }else{
-    $city = $_POST['city']; 
+    $city = $_POST['city'];
     }
 
     // check for state
     if(empty($_POST['state'])){
         $errors['state'] = 'Please insert State </br>';
     }else{
-    $state = $_POST['state']; 
+    $state = $_POST['state'];
     }
 
     // check for country
     if(empty($_POST['country'])){
         $errors['country'] = 'Please insert country </br>';
     }else{
-    $country = $_POST['country']; 
+    $country = $_POST['country'];
     }
 
     // check for church
     if(empty($_POST['church'])){
         $errors['church'] = 'Please insert church </br>';
     }else{
-    $church = $_POST['church']; 
+    $church = $_POST['church'];
     }
 
     // check for bornAgain
     if(empty($_POST['bornAgain'])){
         $errors['bornAgain'] = 'Please insert Born Again </br>';
     }else{
-    $bornAgain = $_POST['bornAgain']; 
+    $bornAgain = $_POST['bornAgain'];
     }
 
     // check for venue
     if(empty($_POST['venue'])){
         $errors['venue'] = 'Please insert Venue </br>';
     }else{
-    $venue = $_POST['venue']; 
+    $venue = $_POST['venue'];
     }
 
 
@@ -122,7 +122,7 @@ if(isset($_POST["submit"])){
 
 
         $sql = "INSERT INTO registration(name,phone,email,sex,maritalStatus,city,state,country,church,bornAgain,venue)VALUES('$name','$phone','$email','$sex','$maritalStatus','$city','$state','$country','$church','$bornAgain','$venue')";
-    
+
 
     if(mysqli_query($conn,$sql)){
         $success = "Registration Complete Make payment to continue";
@@ -310,18 +310,19 @@ if(isset($_POST["submit"])){
                     <div class="row">
                         <div class="col-lg-7 col-md-10 col-sm-10 m-auto">
                         <div class="card">
-                    <?php 
+                    <?php
                     if($success)
                     {
                         echo '<div class="alert alert-success text-center m-2 py-3" role="alert">' ;
                         echo $success;
-                        echo '</div>';
+                       echo '<br/> <a href="/payment.html">Click to make payment </a>
+                        </div>';
                     }
-                    ?>                    
+                    ?>
                     <div class="card-body ">
 
                         <form method="POST">
-                            
+
                             <div class=" mb-3">
                                 <label for="name" class="form-label">Fullname (Firstname Surname): </label>
                                 <input type="text" name="name" class="form-control" value="<?php echo $name; ?>">
