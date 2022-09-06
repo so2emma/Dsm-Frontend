@@ -3,6 +3,6 @@
 		"bootstrap": "^5.2.0"
 	},
     "scripts": {
-        "prod": "rm ../public/assets && cp -r assets ../public"
+        "prod": "rm -rf ../public/assets && cp -r assets ../public"
     }
 }
