@@ -1,8 +1,9 @@
 {
-	"dependencies": {
-		"bootstrap": "^5.2.0"
-	},
-    "scripts": {
-        "prod": "rm -rf ../public/assets && cp -r assets ../public"
-    }
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "@popperjs/core": "^2.11.5"
+  },
+  "scripts": {
+    "prod": "rm -rf ../public/assets && cp -r assets ../public"
+  }
 }

@@ -1,0 +1,23 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@popperjs/core': ^2.11.5
+  bootstrap: ^5.2.0
+
+dependencies:
+  '@popperjs/core': 2.11.6
+  bootstrap: 5.2.0_@popperjs+core@2.11.6
+
+packages:
+
+  /@popperjs/core/2.11.6:
+    resolution: {integrity: sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==}
+    dev: false
+
+  /bootstrap/5.2.0_@popperjs+core@2.11.6:
+    resolution: {integrity: sha512-qlnS9GL6YZE6Wnef46GxGv1UpGGzAwO0aPL1yOjzDIJpeApeMvqV24iL+pjr2kU4dduoBA9fINKWKgMToobx9A==}
+    peerDependencies:
+      '@popperjs/core': ^2.11.5
+    dependencies:
+      '@popperjs/core': 2.11.6
+    dev: false
